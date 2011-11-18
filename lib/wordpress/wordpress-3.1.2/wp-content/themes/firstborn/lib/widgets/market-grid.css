@@ -1,0 +1,160 @@
+/*
+ Widget Name:    City Index Market Grid
+ Description:    Market Grid Widget for WordPress installs
+ Author:         David Laing & Ryan Holder
+ Version:        1.0
+*/
+
+/*	Table of Contents
+
+ * Defaults
+ * Table Styling
+ 
+*/
+
+
+
+/*	Defaults
+ ------------------------------------------------------------ */
+.mg_hidden {
+	display: none;
+}
+
+
+.ci-market-grid {
+
+	background: #fff;
+}
+
+/*	Table Styling
+ ------------------------------------------------------------ */
+#marketGrid table {
+	border: 1px solid #373737;
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+#marketGrid thead {
+	border: 1px solid #373737;
+}
+
+#marketGrid tbody {
+	border: 1px solid #d5d5d5;
+}
+
+#marketGrid th {
+	background: transparent url('../../images/bg-mg-header.png') repeat-x 0 0;
+	font-weight: bold;
+	height: 34px;
+	color: #fff;
+	vertical-align: middle;
+	text-shadow: 0 -1px 1px #000;
+	font-size: 14px;
+}
+
+#marketGrid th.mg-market {
+	padding: 0 0 0 10px;
+}
+
+#marketGrid th.mg-change,
+#marketGrid th.mg-bid,
+#marketGrid th.mg-offer {
+	width: 20%;
+	text-align: center;
+}
+
+#marketGrid tr {
+
+}
+
+#marketGrid td {
+	padding: 5px 0;
+}
+
+#marketGrid td.mg-market {
+	width: 34%;
+	padding: 5px 0 5px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#marketGrid td.mg-change,
+#marketGrid td.mg-bid,
+#marketGrid td.mg-offer {
+	width: 22%;
+	text-align: center;
+	font-size: 11px;
+	padding: 10px 0;
+}
+
+#marketGrid td.mg-sparkline {
+	padding: 0;
+}
+
+#marketGrid td.mg-sparkline span {
+	overflow: hidden;
+	display: block;
+	margin: -3px -2px;
+}
+
+#marketGrid .alt-row-top td {
+	background: #efefef;
+	border-top: 1px solid #d5d5d5;
+}
+
+#marketGrid .alt-row-bottom td {
+	background: #efefef;
+	border-bottom: 1px solid #d5d5d5;
+}
+
+#marketGrid td.mg-change span {
+	background: #7ad2f4 url('../../images/bg-indicator.png') repeat-x 0 0;
+	color: #fff;
+	text-shadow: 1px 0 1px #555;
+	padding: 3px 5px;
+	border-radius: 5px;
+	border: 1px solid #63a6c0;
+	-moz-border-radius: 5px;	
+}
+
+#marketGrid td.mg-change span.red {
+	background: #f56c7e url('../../images/bg-indicator.png') repeat-x 0 0;
+	border: 1px solid #ce4f5e;
+}
+
+#marketGrid td.mg-bid span,
+#marketGrid td.mg-offer span {
+	background: #aaa url('../../images/bg-indicator.png') repeat-x 0 0;
+	color: #fff;
+	text-shadow: 1px 0 1px #555;
+	padding: 3px 5px;
+	border-radius: 5px;
+	border: 1px solid #888;
+	-moz-border-radius: 5px;
+}
+
+#mg-search-box {
+    background: #373737;
+    border: 1px solid #373737;
+    padding: 5px;
+}
+
+#mg-search-box input {
+	border: 1px solid #000;
+	padding: 4px 10px 5px;
+	width: 195px;
+}
+
+#mg-search-box button {
+	background: #000 url('../../images/bg-search-button.png') no-repeat 0 0;
+	border-radius: 0px 5px 5px 0;
+	-moz-border-radius: 0px 5px 5px 0;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    font-size: 11px;
+    margin-left: -4px;
+    padding: 6px 10px 5px;
+    text-shadow: 0 -1px 1px #000000;
+    text-transform: uppercase;	
+}

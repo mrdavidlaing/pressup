@@ -1,0 +1,47 @@
+<!doctype html> 
+<head>
+    <title>Chart demo</title>
+
+    <link rel="stylesheet" type="text/css" href="js/libs/jqplot/jquery.jqplot.min.css" />
+	<script src="js/libs/head.min.js"></script>
+ 
+	<script> 
+	    var cdn_libs = [
+				   {jquery: "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"},
+				   {jquery_tmpl: "http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"},
+				   {json2: "http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"}
+				   ],
+			local_libs = [
+				   {jqplot: "js/libs/jqplot/jquery.jqplot.min.js"},
+				   "js/libs/jqplot/plugins/jqplot.cursor.min.js",
+				   "js/libs/jqplot/plugins/jqplot.dateAxisRenderer.min.js",
+				   "js/libs/jqplot/plugins/jqplot.canvasTextRenderer.min.js",
+				   "js/libs/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js",
+				   "js/libs/jqplot/plugins/jqplot.highlighter.min.js",
+				   "js/libs/jqplot/plugins/jqplot.ohlcRenderer.min.js",
+				   "js/libs/jqplot/plugins/jqplot.json2.min.js"
+				   ],
+		    CIAPI = [
+                "../CIAPI/js/CIAPI-0001.min.js"
+                ],
+		    CIAPI_Chart = [
+                "js/CIAPI.Chart-0001.min.js"
+            ];
+	    
+		head.js.apply(this, cdn_libs.concat(local_libs, CIAPI, CIAPI_Chart));
+	</script>
+</head>
+<body>
+    <div id="chart1" style="height:100%; width:100%;"></div>
+
+    <div id="chart2" style="height:250px; width:250px;"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+

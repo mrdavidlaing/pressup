@@ -1,4 +1,8 @@
-sys = require('util');
+var sys = require('util'),
+    config = { server: "www1-new.web-angle.com",
+               db_root_password: "QzEoS8z4UjN0dIQArowX",
+               db_name: "wordpress_3_2_1" },
+    exec = require('child_process').exec;
 
 desc('SpeedyPress is wordpress optimised for theme and plugin developers');
 task('default', [], function () {
@@ -21,10 +25,21 @@ namespace('theme', function () {
 
 
 namespace('db', function () {
-  desc('Dump the current database to data/db/{dbname}-{yyyymmdd-hhmmss}.sql.zip');
+  desc('Dump the current database to db/{dbname}-{yyyymmdd-hhmmss}.sql.zip');
   task('dump', [], function () {
-    console.log('Dumping database');
+      var dump_file_name = "db/" + config.db_name + ".sql.gz",
+          cmd = "ssh " + config.server + " 'mysqldump -p\"" + config.db_root_password + "\" \"" + config.db_name + "\" | gzip' > " + dump_file_name;
+      console.log('Dumping database using (could take a while): \n\t'+cmd); 
+      exec(cmd, function (err, stdout, stderr) {
+         if (stderr) {
+           console.log('Error: ' + stderr);
+         }
+         if (stdout) {
+           console.log(stdout);
+         }
+      }); 
   });
+
   desc('Restore database dump');
   task('restore', [], function () {
     console.log('Restoring database');

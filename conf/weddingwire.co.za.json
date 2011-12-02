@@ -1,0 +1,29 @@
+{
+    "fqdn": "weddingwire.co.za",
+    "version" : 2,
+    "server": "www1.web-angle.com",
+    "db": {
+        "db_name": "wordpress_3_2_1",
+        "db_user": "root",
+        "db_password": "QzEoS8z4UjN0dIQArowX",
+        "db_admin_user": "root",
+        "db_admin_password": "QzEoS8z4UjN0dIQArowX"
+    },
+    "wordpress" : "lib/wordpress/wordpress-3.2.1",
+    "themes" : {
+        "my-theme" : {
+            "source": "src/themes/my-theme",
+            "build_action": "link"
+        }
+    },
+    "plugins" : {
+        "gravity-forms" : {
+            "source": "lib/gravity-forms/gravity-forms.1.5",
+            "build_action": "link"
+        },
+        "my-plugin" : {
+            "source": "src/plugins/my-plugin",
+            "build_action": "link"
+        }
+    }
+}

@@ -18,10 +18,40 @@ task('default', [], function () {
   console.log('run jake -T for all the available options');
 });
 
+desc('Initialise a new PressUp Wordpress repository');
+task('init', [], function () {
+    console.log("Setting up folder structure:");
+    [   "conf",
+        "conf/nginx",
+        "db",
+        "httpdocs",
+        "lib",
+        "lib/wordpress",
+        "src",
+        "src/plugins",
+        "src/themes",
+        "test"
+    ].forEach(function(the_folder) {
+        if (!path.existsSync(the_folder)) {
+             fs.mkdirSync(the_folder, 0744);
+        }
+        console.log("\t"+the_folder);
+    });
+});
+
 namespace('plugin', function () {
   desc('Create a new plugin');
-  task('create', [], function () {
-    console.log('doing plugin:create task');
+  task('create', [], function (plugin_name) {
+      if (plugin_name==undefined || plugin_name==='') {
+          console.log("ERROR: you must supply a plugin name - eg: jake plugin:create[mypluginname]");
+          process.exit();
+      }
+      console.log('Creating plugin ' + plugin_name);
+      var the_folder = "src/plugins/" + plugin_name;
+      if (!path.existsSync(the_folder)) {
+           fs.mkdirSync(the_folder, 0744);
+      }
+      console.log("created " + the_folder);
   });
 });
 

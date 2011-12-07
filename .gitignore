@@ -1,1 +1,4 @@
 db/*
+test/sample_repo/httpdocs/*
+*.iml
+.idea/*

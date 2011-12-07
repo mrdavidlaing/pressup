@@ -1,0 +1,451 @@
+/*
+	Theme Name: Under Construction
+	Theme URL: http://radweb.co.za/
+	Description: Under Construction Theme
+	Author: Ryan Holder
+	Author URI: http://ryanholder.com/
+	Version: 1.0
+	
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/*******************************
+			RESET
+*******************************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body{
+	line-height: 1;
+}
+
+ol, ul{
+	list-style: none;
+}
+
+blockquote, q{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+	content: '';
+	content: none;
+}
+
+:focus{
+	outline: 0;
+}
+
+ins{
+	text-decoration: none;
+}
+
+del{
+	text-decoration: line-through;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+textarea{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/*******************************
+	  BASIC TEXT STYLES
+*******************************/
+
+/*
+	960 Grid System ~ Text CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/** Basic HTML **/
+
+body{
+	font: 12px/1.5 Helvetica, Arial, sans-serif;
+	color:#565556;
+}
+
+a{
+	color:#2a3d48;
+	text-decoration:none;
+}
+
+a:hover,
+a:focus{
+	text-decoration:underline;
+}
+
+a:focus{
+	outline: 1px dotted;
+}
+
+hr{
+	border: 0 #ccc solid;
+	border-top-width: 1px;
+	clear: both;
+	height: 0;
+}
+
+ol,ul{
+	list-style-type:circle;
+}
+
+ol ol,ul ul{
+	font-style:italic;
+}
+
+ol{
+	list-style-type:decimal;
+}
+
+ol ol{
+	list-style-type:lower-latin;
+}
+
+ol,ul,blockquote,pre,li{
+	margin-left: 30px;
+}
+
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset{
+	margin-bottom: 20px;
+}
+
+blockquote{
+	padding: 5px 25px 5px 0; font-style:italic;
+}
+
+blockquote p{
+	border-left: 2px solid #eee; padding-left: 25px;
+}
+
+dt{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+ 
+dd{
+	padding: 0;
+}
+
+/** Headings **/
+
+@font-face {
+	font-family: 'MuseoSlab500';
+	src: url('font/museo_slab_500-webfont.eot');
+	src: local('?'), url('font/museo_slab_500-webfont.woff') format('woff'), url('font/museo_slab_500-webfont.ttf') format('truetype'), url('font/museo_slab_500-webfont.svg#webfonttCUdX8Fr') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: Rockwell, MuseoSlab500, serif;
+	font-weight:normal;
+}
+
+h1{
+	font-size: 30px;
+}
+
+h2{
+	font-size: 50px;
+}
+
+h3{
+	font-size: 30px;
+}
+
+h4{
+	font-size: 30px;
+}
+
+h5{
+	font-size: 17px;
+}
+
+h6{
+	font-size: 15px;
+}
+
+/** Clearfix **/
+
+.clearfix:after{
+	clear:both;
+	content:' ';
+	display:block;
+	font-size:0;
+	line-height:0;
+	visibility:hidden;
+	width:0;
+	height:0
+}
+
+* html .clearfix,
+*:first-child
++html .clearfix{
+	zoom:1
+}
+
+/*******************************
+		CUSTOM CSS
+*******************************/
+
+body{
+	background:#dbd9d9 url('images/blue/bg.png') repeat-x top left;
+}
+
+div#wrapper{
+	width:960px;
+	margin:0 auto;
+}
+
+/** Header **/
+
+div#header{
+	width:940px;
+	margin:0 10px;
+	height:170px;
+	color:#FFFFFF;
+	background:transparent url('images/blue/header_bg.png') no-repeat top center;
+	z-index:1;
+}
+
+	div#header h1{
+		display:inline-block;
+		height:56px;
+		line-height:56px;
+		padding:0 20px 0 0;
+		margin:50px 0 0 0;
+		background: url('images/blue/header_divider.png') no-repeat top right;
+		zoom: 1;
+		*display:inline;
+	}
+	
+	div#header p{
+		display:inline;
+		padding:0 0 0 20px;
+	}
+	
+/** Content **/
+
+div#content{
+	margin:1px 0 0 0;
+	background:transparent url('images/title_bg.png') no-repeat top center;
+}
+	
+	/** Title **/
+
+	div#title{
+		text-align:center;
+		height:379px;
+		margin:0 0 10px 0;
+	}
+
+		div#title img{
+			margin-top:-40px;
+			z-index:9999;
+		}
+		
+		div#title h2{
+			color:#565556;
+			margin:30px 0 10px 0;
+			line-height:50px;
+		}
+		
+		div#title h3{
+			color:#1e2730;
+			text-shadow:1px 2px 2px rgba(255,250,250,0.4);
+			line-height:50px;
+		}
+	
+	/** Main Content **/
+
+	div#content h4, div#content h3{
+		color:#2a3d48;
+		margin:40px 0 0 0;
+	}
+	
+	div#content p{
+	}
+
+		/** Left Column **/
+		
+		div#left{
+			width:460px;
+			margin:0 10px;
+			display:inline;
+			float:left;
+			background:transparent url('images/content_divider.png') no-repeat center right;
+			padding:0 0 40px 0;
+		}
+		
+			/** Countdown **/
+
+			.hasCountdown {
+				margin:0 0 30px 0;
+				overflow:auto;
+			}
+			
+			.countdown_holding span {
+				
+			}
+			
+			.countdown_row {
+				clear: both;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.countdown_section {
+				display: block;
+				float: left;
+				text-align: center;
+				color:#FFFFFF;
+				background: url('images/blue/countdown_bg.png') no-repeat;
+				width:86px;
+				height:86px;
+				margin:0 20px 0 0;
+				font-size:13px;
+				line-height:20px;
+			}
+			
+			.countdown_amount {
+				font-size:50px;
+				font-family:Rockwell;
+				font-weight:bold;
+				letter-spacing:3px;
+				line-height:61px;
+			}
+			
+			.countdown_descr{
+				display: block;
+				font-size:20px;
+			}
+			
+			
+			/** Newsletter **/
+			
+			.gform_wrapper ul li, .gform_wrapper ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+				form#newsletter input[type=text], .gform_wrapper input[type=text]{
+					background: transparent url('images/newsletter_bg.png') no-repeat top left;				
+					border:0;
+					color:#FFFFFF;
+					width:360px;
+					margin: 20px 0 0;
+					padding:10px 10px 0;
+					font-size:15px;
+					height: 38px;
+					width:420px;
+				}
+				
+				form#newsletter input[type=image]{
+					position:absolute;
+					top:0;
+					right:0;
+				}
+				
+			.gform_wrapper input.button {
+				background: #444444 url(images/button-overlay.png) repeat-x 0 0;
+				color: #FFFFFF;
+				font-size: 11px;
+				font-family: Arial, Tahoma, Verdana;
+				font-weight: normal;
+				text-transform: uppercase;
+				text-decoration: none;
+				margin: 0;
+				padding: 4px 9px 4px 9px;	
+				border-radius: 6px;
+				-moz-border-radius: 6px;
+				-webkit-border-radius: 6px;
+				-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+				-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+				text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+				border: 1px solid #222222;
+				position: relative;
+				cursor: pointer;
+				overflow: visible;
+				}				
+				
+				@media screen and (-webkit-min-device-pixel-ratio:0) {
+					.gform_wrapper input[type=text]{
+						padding:0px 10px 0;
+						margin: 0 0 10px 0;
+					}
+				}				
+		
+		/** Right Column **/
+		
+		div#right{
+			width:430px;
+			margin:0 10px 0 275px;
+			display:inline;
+			float:left;
+			padding:0 0 40px 0;
+		}
+		
+			/** Twitter **/
+			
+			div#twitter{
+			
+			}
+				
+				p.date{
+					font-weight:bold;
+					margin:0;
+				}
+			
+			/** Connect **/
+			
+			ul#social{
+				list-style:none;
+				margin:0 0 20px 0;
+			}
+			
+				ul#social li{
+					display:inline;
+					margin:0 20px 0 0;
+				}
+		
+		
+		
+/** Footer **/
+
+div#footer{
+	text-align:center;
+	background:transparent url('images/footer_bg.png') no-repeat top center;
+	padding:50px 0 0 0;
+}
+
+	div#footer p{
+	}

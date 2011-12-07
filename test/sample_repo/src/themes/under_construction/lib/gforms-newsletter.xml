@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.4.3.1">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Newsletter]]></title>
+		<description><![CDATA[Recieve our latest updates via our newsletter service.]]></description>
+		<confirmation type="message">
+			<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+		</confirmation>
+		<button type="text">
+			<text><![CDATA[Submit]]></text>
+			<imageUrl><![CDATA[http://demos.ryanholder.local/wp-content/themes/under_construction/images/blue/newsletter_button.png]]></imageUrl>
+		</button>
+		<fields>
+			<field id="1" type="email" size="medium">
+				<defaultValue><![CDATA[Type your e-mail to subscribe...]]></defaultValue>
+			</field>
+		</fields>
+		<cssClass><![CDATA[button]]></cssClass>
+	</form>
+</forms>

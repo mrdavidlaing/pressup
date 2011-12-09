@@ -3,3 +3,4 @@ test/sample_repo/httpdocs/*
 *.iml
 .idea/*
 test/tmp/*
+.DS_Store

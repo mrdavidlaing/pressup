@@ -18,7 +18,7 @@ cli.parse(
 cli.main(function (args, options) {
       if (this.command.toLowerCase() == "init")
       {
-          return pressup.init(args);
+          return pressup.init(args[0]);
       }
 
       if (!options.config) this.fatal('--config is required');

@@ -5,14 +5,14 @@ var test_helpers = {
 
         process.stdout.write = (function(write) {
             return function(string, encoding, fd) {
-                //write.apply(process.stdout, arguments)
+                write.apply(process.stdout, arguments)
                 callback(string, encoding, fd)
             }
         })(process.stdout.write);
 
         process.stderr.write = (function(write) {
             return function(string, encoding, fd) {
-                //write.apply(process.stderr, arguments)
+                write.apply(process.stderr, arguments)
                 callback(string, encoding, fd)
             }
         })(process.stderr.write);
@@ -22,6 +22,7 @@ var test_helpers = {
             process.stderr.write = old_stderr_write;
         }
     }
+
 }
 
 module.exports = test_helpers;

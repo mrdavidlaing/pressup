@@ -2,6 +2,7 @@
 var cli = require('cli'),
     fs  = require('fs'),
     pressup = {
+        check_prereqs: require('./lib/prereqs'),
         init: require('./lib/init'),
         build: require('./lib/build'),
         plugin: require('./lib/plugin'),
@@ -15,6 +16,8 @@ cli.parse(
     },
     ['init', 'build', 'plugin:create', 'theme:create', 'db:backup', 'db:restore'] //command list
 );
+
+pressup.check_prereqs();
 
 cli.main(function (args, options) {
       if (this.command.toLowerCase() == "init")

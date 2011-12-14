@@ -5,6 +5,8 @@ var should = require('should'),
     base_folder = "test/tmp/fs_helpers";
 
 describe('fs_helpers', function(){
+
+
     describe('isSymlinkDir should identify symlinks to other folders', function(){
         before(function() {
             fs_helpers.mkdir(base_folder + "/simple_collection", process.getuid(), process.getgid(), 0765);
@@ -76,6 +78,27 @@ describe('fs_helpers', function(){
 
             fs_helpers.rm(base_folder + "/simple_collection/1");
             fs_helpers.rm(base_folder + "/simple_collection");
+        });
+    });
+
+     describe('copyRecursiveSync should recursively copy everything below a folder', function(){
+       before(function() {
+            fs_helpers.mkdir(base_folder + "/a_collection", process.getuid(), process.getgid(), 0765);
+            fs_helpers.mkdir(base_folder + "/a_collection/1", process.getuid(), process.getgid(), 0765);
+            fs.writeFileSync(base_folder + "/a_collection/1/a_file.txt", "Content");
+            fs_helpers.mkdir(base_folder + "/copy_of_a_folder", process.getuid(), process.getgid(), 0765);
+
+            fs_helpers.copyRecursiveSync(base_folder + "/a_collection", base_folder + "/copy_of_a_folder");
+        });
+
+        it('should copy everything', function(){
+          path.existsSync(base_folder + "/copy_of_a_folder/1").should.be.true;
+          path.existsSync(base_folder + "/copy_of_a_folder/1/a_file.txt").should.be.true;
+        });
+
+        after(function() {
+            fs_helpers.rmdirSyncRecursive(base_folder + "/a_collection");
+            fs_helpers.rmdirSyncRecursive(base_folder + "/copy_of_a_folder");
         });
     });
 });

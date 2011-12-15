@@ -19,6 +19,23 @@ describe('build', function(){
             result = build({base_folder: sample_repo_folder},{
                 fqdn: "test.domain.com",
                 version: 42,
+                "db": {
+                    "db_name": "the_db_name",
+                    "db_user": "wp_user",
+                    "db_password": "wp_user_password",
+                    "db_admin_user": "root",
+                    "db_admin_password": "root_password"
+                },
+                "salts": {
+                    "AUTH_KEY":         "the_auth_key",
+                    "SECURE_AUTH_KEY":  "the_secure_auth_key",
+                    "LOGGED_IN_KEY":    "the_logged_in_key",
+                    "NONCE_KEY":        "the_nonce_key",
+                    "AUTH_SALT":        "the_auth_salt",
+                    "SECURE_AUTH_SALT": "the_secure_auth_salt",
+                    "LOGGED_IN_SALT":   "the_logged_in_salt",
+                    "NONCE_SALT":       "the_nonce_salt"
+                },
                 wordpress: "lib/wordpress/wordpress-3.3-RC2",
                 plugins: {},
                 themes: {}
@@ -37,6 +54,9 @@ describe('build', function(){
         });
         it('should create wp-config.php file', function(){
           path.existsSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/wp-config.php").should.be.true;
+        });
+        it('should create delete wp-config-sample.php file', function(){
+          path.existsSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/wp-config-sample.php").should.be.false;
         });
         it('should fix the file permissions of linked files', function(){
             var fileStats = fs.statSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/" + file_with_bad_permissions);
@@ -62,6 +82,23 @@ describe('build', function(){
             result = build({base_folder: sample_repo_folder},{
                 fqdn: "test.domain.com",
                 version: 42,
+                "db": {
+                    "db_name": "the_db_name",
+                    "db_user": "wp_user",
+                    "db_password": "wp_user_password",
+                    "db_admin_user": "root",
+                    "db_admin_password": "root_password"
+                },
+                "salts": {
+                    "AUTH_KEY":         "the_auth_key",
+                    "SECURE_AUTH_KEY":  "the_secure_auth_key",
+                    "LOGGED_IN_KEY":    "the_logged_in_key",
+                    "NONCE_KEY":        "the_nonce_key",
+                    "AUTH_SALT":        "the_auth_salt",
+                    "SECURE_AUTH_SALT": "the_secure_auth_salt",
+                    "LOGGED_IN_SALT":   "the_logged_in_salt",
+                    "NONCE_SALT":       "the_nonce_salt"
+                },
                 wordpress: "lib/wordpress/wordpress-3.3-RC2",
                 plugins: {},
                 themes: {}
@@ -70,6 +107,23 @@ describe('build', function(){
             result = build({base_folder: sample_repo_folder},{
                 fqdn: "test.domain.com",
                 version: 42,
+                "db": {
+                    "db_name": "the_db_name",
+                    "db_user": "wp_user",
+                    "db_password": "wp_user_password",
+                    "db_admin_user": "root",
+                    "db_admin_password": "root_password"
+                },
+                "salts": {
+                    "AUTH_KEY":         "the_auth_key",
+                    "SECURE_AUTH_KEY":  "the_secure_auth_key",
+                    "LOGGED_IN_KEY":    "the_logged_in_key",
+                    "NONCE_KEY":        "the_nonce_key",
+                    "AUTH_SALT":        "the_auth_salt",
+                    "SECURE_AUTH_SALT": "the_secure_auth_salt",
+                    "LOGGED_IN_SALT":   "the_logged_in_salt",
+                    "NONCE_SALT":       "the_nonce_salt"
+                },
                 wordpress: "lib/wordpress/wordpress-3.3-RC2",
                 plugins: {},
                 themes: {}

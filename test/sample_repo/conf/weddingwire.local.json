@@ -29,7 +29,7 @@
     "plugins" : {
         "gravity-forms" : {
             "source": "lib/gravity-forms/gravity-forms.1.5",
-            "build_action": "link"
+            "build_action": "copy"
         },
         "my-plugin" : {
             "source": "src/plugins/my-plugin",

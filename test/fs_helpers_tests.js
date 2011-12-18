@@ -2,32 +2,9 @@ var should = require('should'),
     fs = require('fs'),
     path = require('path'),
     fs_helpers = require('../lib/fs_helpers'),
-    base_folder = "test/tmp/fs_helpers";
+    base_folder = "./test/tmp/fs_helpers";
 
 describe('fs_helpers', function(){
-
-
-    describe('isSymlinkDir should identify symlinks to other folders', function(){
-        before(function() {
-            fs_helpers.mkdir(base_folder + "/simple_collection", process.getuid(), process.getgid(), 0765);
-            fs_helpers.mkdir(base_folder + "/collection", process.getuid(), process.getgid(), 0765);
-            fs_helpers.symlink(base_folder + "/collection/symlink_to_simple_collection", base_folder + "/simple_collection");
-
-        });
-
-        it('should NOT identify a regular folder as a symlink folder', function(){
-          fs_helpers.isSymlinkDir(base_folder + "/simple_collection").should.be.false;
-        });
-        it('should identify a symlink folder as a symlink folder', function(){
-          fs_helpers.isSymlinkDir(base_folder + "/collection/symlink_to_simple_collection").should.be.true;
-        });
-
-        after(function() {
-            fs.unlinkSync(base_folder + "/collection/symlink_to_simple_collection");
-            fs_helpers.rm(base_folder + "/collection");
-            fs_helpers.rm(base_folder + "/simple_collection");
-        });
-    });
 
     describe('rmdirSyncRecursive - simple collection of folders', function(){
         before(function() {

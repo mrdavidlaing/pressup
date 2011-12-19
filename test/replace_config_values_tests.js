@@ -70,28 +70,28 @@ describe('build', function(){
             wpconfig.should.include.string("define('DB_PASSWORD', 'wp_user_password');");
         });
         it('should update AUTH_KEY', function(){
-            wpconfig.should.include.string("define('AUTH_KEY', 'the_auth_key');");
+            wpconfig.should.match(/define\('AUTH_KEY',\s+'the_auth_key'\);/);
         });
         it('should update SECURE_AUTH_KEY', function(){
-            wpconfig.should.include.string("define('SECURE_AUTH_KEY', 'the_secure_auth_key');");
+            wpconfig.should.match(/define\('SECURE_AUTH_KEY',\s+'the_secure_auth_key'\);/);
         });
         it('should update LOGGED_IN_KEY', function(){
-            wpconfig.should.include.string("define('LOGGED_IN_KEY', 'the_logged_in_key');");
+            wpconfig.should.match(/define\('LOGGED_IN_KEY',\s+'the_logged_in_key'\);/);
         });
         it('should update NONCE_KEY', function(){
-            wpconfig.should.include.string("define('SECURE_AUTH_SALT', 'the_nonce_key');");
+            wpconfig.should.match(/define\('NONCE_KEY',\s+'the_nonce_key'\);/);
         });
         it('should update AUTH_SALT', function(){
-            wpconfig.should.include.string("define('AUTH_KEY', 'the_auth_salt');");
+            wpconfig.should.match(/define\('AUTH_SALT',\s+'the_auth_salt'\);/);
         });
         it('should update SECURE_AUTH_SALT', function(){
-            wpconfig.should.include.string("define('SECURE_AUTH_SALT', 'the_secure_auth_salt');");
+            wpconfig.should.match(/define\('SECURE_AUTH_SALT',\s+'the_secure_auth_salt'\);/);
         });
         it('should update LOGGED_IN_SALT', function(){
-            wpconfig.should.include.string("define('LOGGED_IN_SALT', 'the_logged_in_salt');");
+            wpconfig.should.match(/define\('LOGGED_IN_SALT',\s+'the_logged_in_salt'\);/);
         });
         it('should update NONCE_SALT', function(){
-            wpconfig.should.include.string("define('NONCE_SALT', 'the_nonce_salt');");
+            wpconfig.should.match(/define\('NONCE_SALT',\s+'the_nonce_salt'\);/);
         });
     });
 });

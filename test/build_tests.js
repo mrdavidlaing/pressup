@@ -1,5 +1,6 @@
 var should = require('should'),
     fs = require('fs'),
+    fs_helpers = require('../lib/fs_helpers'),
     path = require('path'),
     global_config = require('../lib/global_config'),
     build = require('../lib/build'),
@@ -63,7 +64,14 @@ describe('build', function(){
 
             fileStats.uid.should.equal(global_config.built.uid);
             fileStats.gid.should.equal(global_config.built.gid);
-            //TODO - how do I check file permissions? fileStats.mode.should.equal(0755);
+
+            fs_helpers.modeSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/" + file_with_bad_permissions).octal.should.equal("100755");
+        });
+        it('should set the permissions on uploads/ to 777', function(){
+            fs_helpers.modeSync(sample_repo_folder + "/httpdocs/test.domain.com/uploads").octal.should.equal("40777");
+        });
+        it('should set the permissions on all wp files as 755', function(){
+            fs_helpers.modeSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/wp-admin").octal.should.equal("40755");
         });
         it('should set the permissions on the folders correctly', function(){
             fs.statSync(sample_repo_folder + "/httpdocs").isDirectory().should.be.true;

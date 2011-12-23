@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="weddingwire_local">
+	<table_data name="wp_users">
+	<row>
+		<field name="ID">1</field>
+		<field name="user_login">admin</field>
+		<field name="user_pass">$P$BGGQ4hc6mgI7EKstozqEgABveMMAvy.</field>
+		<field name="user_nicename">admin</field>
+		<field name="user_email">david@davidlaing.com</field>
+		<field name="user_url"></field>
+		<field name="user_registered">2011-12-15 15:03:03</field>
+		<field name="user_activation_key"></field>
+		<field name="user_status">0</field>
+		<field name="display_name">admin</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

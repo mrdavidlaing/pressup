@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="weddingwire_local">
+	<table_data name="wp_usermeta">
+	<row>
+		<field name="umeta_id">1</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">first_name</field>
+		<field name="meta_value"></field>
+	</row>
+	<row>
+		<field name="umeta_id">2</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">last_name</field>
+		<field name="meta_value"></field>
+	</row>
+	<row>
+		<field name="umeta_id">3</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">nickname</field>
+		<field name="meta_value">admin</field>
+	</row>
+	<row>
+		<field name="umeta_id">4</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">description</field>
+		<field name="meta_value"></field>
+	</row>
+	<row>
+		<field name="umeta_id">5</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">rich_editing</field>
+		<field name="meta_value">true</field>
+	</row>
+	<row>
+		<field name="umeta_id">6</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">comment_shortcuts</field>
+		<field name="meta_value">false</field>
+	</row>
+	<row>
+		<field name="umeta_id">7</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">admin_color</field>
+		<field name="meta_value">fresh</field>
+	</row>
+	<row>
+		<field name="umeta_id">8</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">use_ssl</field>
+		<field name="meta_value">0</field>
+	</row>
+	<row>
+		<field name="umeta_id">9</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">show_admin_bar_front</field>
+		<field name="meta_value">true</field>
+	</row>
+	<row>
+		<field name="umeta_id">10</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">wp_capabilities</field>
+		<field name="meta_value">a:1:{s:13:&quot;administrator&quot;;s:1:&quot;1&quot;;}</field>
+	</row>
+	<row>
+		<field name="umeta_id">11</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">wp_user_level</field>
+		<field name="meta_value">10</field>
+	</row>
+	<row>
+		<field name="umeta_id">12</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">dismissed_wp_pointers</field>
+		<field name="meta_value">wp330_toolbar,wp330_media_uploader,wp330_saving_widgets</field>
+	</row>
+	<row>
+		<field name="umeta_id">13</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">show_welcome_panel</field>
+		<field name="meta_value">0</field>
+	</row>
+	<row>
+		<field name="umeta_id">14</field>
+		<field name="user_id">1</field>
+		<field name="meta_key">wp_dashboard_quick_press_last_post_id</field>
+		<field name="meta_value">3</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

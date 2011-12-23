@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="weddingwire_local">
+	<table_data name="wp_posts">
+	<row>
+		<field name="ID">1</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:03:03</field>
+		<field name="post_date_gmt">2011-12-15 15:03:03</field>
+		<field name="post_content">Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!</field>
+		<field name="post_title">Hello world!</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">publish</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">hello-world</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:03:03</field>
+		<field name="post_modified_gmt">2011-12-15 15:03:03</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/?p=1</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">post</field>
+		<field name="post_mime_type"></field>
+		<field name="comment_count">1</field>
+	</row>
+	<row>
+		<field name="ID">2</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:03:03</field>
+		<field name="post_date_gmt">2011-12-15 15:03:03</field>
+		<field name="post_content">This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:
+
+&lt;blockquote&gt;Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like pi&amp;#241;a coladas. (And gettin' caught in the rain.)&lt;/blockquote&gt;
+
+...or something like this:
+
+&lt;blockquote&gt;The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickies to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.&lt;/blockquote&gt;
+
+As a new WordPress user, you should go to &lt;a href=&quot;http://weddingwire.local/wp-admin/&quot;&gt;your dashboard&lt;/a&gt; to delete this page and create new pages for your content. Have fun!</field>
+		<field name="post_title">Sample Page</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">publish</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">sample-page</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:03:03</field>
+		<field name="post_modified_gmt">2011-12-15 15:03:03</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/?page_id=2</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">page</field>
+		<field name="post_mime_type"></field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">3</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:03:16</field>
+		<field name="post_date_gmt">0000-00-00 00:00:00</field>
+		<field name="post_content"></field>
+		<field name="post_title">Auto Draft</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">auto-draft</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name"></field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:03:16</field>
+		<field name="post_modified_gmt">0000-00-00 00:00:00</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/?p=3</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">post</field>
+		<field name="post_mime_type"></field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">5</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:38</field>
+		<field name="post_date_gmt">2011-12-15 15:34:38</field>
+		<field name="post_content"></field>
+		<field name="post_title">Chrysanthemum</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">chrysanthemum</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:38</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:38</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Chrysanthemum.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">6</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:39</field>
+		<field name="post_date_gmt">2011-12-15 15:34:39</field>
+		<field name="post_content"></field>
+		<field name="post_title">Desert</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">desert</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:39</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:39</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Desert.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">7</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:39</field>
+		<field name="post_date_gmt">2011-12-15 15:34:39</field>
+		<field name="post_content"></field>
+		<field name="post_title">Hydrangeas</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">hydrangeas</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:39</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:39</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Hydrangeas.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">8</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:40</field>
+		<field name="post_date_gmt">2011-12-15 15:34:40</field>
+		<field name="post_content"></field>
+		<field name="post_title">Jellyfish</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">jellyfish</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:40</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:40</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Jellyfish.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">9</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:42</field>
+		<field name="post_date_gmt">2011-12-15 15:34:42</field>
+		<field name="post_content"></field>
+		<field name="post_title">Koala</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">koala</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:42</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:42</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Koala.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">10</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:42</field>
+		<field name="post_date_gmt">2011-12-15 15:34:42</field>
+		<field name="post_content"></field>
+		<field name="post_title">Lighthouse</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">lighthouse</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:42</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:42</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Lighthouse.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">11</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:43</field>
+		<field name="post_date_gmt">2011-12-15 15:34:43</field>
+		<field name="post_content"></field>
+		<field name="post_title">Penguins</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">penguins</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:43</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:43</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Penguins.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	<row>
+		<field name="ID">12</field>
+		<field name="post_author">1</field>
+		<field name="post_date">2011-12-15 15:34:44</field>
+		<field name="post_date_gmt">2011-12-15 15:34:44</field>
+		<field name="post_content"></field>
+		<field name="post_title">Tulips</field>
+		<field name="post_excerpt"></field>
+		<field name="post_status">inherit</field>
+		<field name="comment_status">open</field>
+		<field name="ping_status">open</field>
+		<field name="post_password"></field>
+		<field name="post_name">tulips</field>
+		<field name="to_ping"></field>
+		<field name="pinged"></field>
+		<field name="post_modified">2011-12-15 15:34:44</field>
+		<field name="post_modified_gmt">2011-12-15 15:34:44</field>
+		<field name="post_content_filtered"></field>
+		<field name="post_parent">0</field>
+		<field name="guid">http://weddingwire.local/wp-content/uploads/2011/12/Tulips.jpg</field>
+		<field name="menu_order">0</field>
+		<field name="post_type">attachment</field>
+		<field name="post_mime_type">image/jpeg</field>
+		<field name="comment_count">0</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

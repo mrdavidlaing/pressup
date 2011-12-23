@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="weddingwire_local">
+	<table_data name="wp_terms">
+	<row>
+		<field name="term_id">1</field>
+		<field name="name">Uncategorized</field>
+		<field name="slug">uncategorized</field>
+		<field name="term_group">0</field>
+	</row>
+	<row>
+		<field name="term_id">2</field>
+		<field name="name">Blogroll[edit]</field>
+		<field name="slug">blogroll</field>
+		<field name="term_group">0</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

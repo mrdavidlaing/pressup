@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="weddingwire_local">
+	<table_data name="wp_comments">
+	<row>
+		<field name="comment_ID">1</field>
+		<field name="comment_post_ID">1</field>
+		<field name="comment_author">Mr WordPress</field>
+		<field name="comment_author_email"></field>
+		<field name="comment_author_url">http://wordpress.org/</field>
+		<field name="comment_author_IP"></field>
+		<field name="comment_date">2011-12-15 15:03:03</field>
+		<field name="comment_date_gmt">2011-12-15 15:03:03</field>
+		<field name="comment_content">Hi, this is a comment.&lt;br /&gt;To delete a comment, just log in and view the post&amp;#039;s comments. There you will have the option to edit or delete them.</field>
+		<field name="comment_karma">0</field>
+		<field name="comment_approved">1</field>
+		<field name="comment_agent"></field>
+		<field name="comment_type"></field>
+		<field name="comment_parent">0</field>
+		<field name="user_id">0</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

@@ -36,8 +36,8 @@ describe('mysqldump', function(){
             sql.should.include.string("DROP TABLE IF EXISTS");
         });
 
-         it('should not contain AUTO_INCREMENT statements', function(){
-            sql.should.not.include.string("AUTO_INCREMENT");
+         it('should not contain AUTO_INCREMENT={row_count} statements', function(){
+            sql.should.not.include.string("AUTO_INCREMENT=");
         });
     });
 
@@ -61,7 +61,7 @@ describe('mysqldump', function(){
         });
 
         it('should contain table definitions', function(){
-            sql.should.include.string("CREATE TABLE");
+            sql.should.include.string("table_data name=\"wp_posts\"");
         });
     });
 });

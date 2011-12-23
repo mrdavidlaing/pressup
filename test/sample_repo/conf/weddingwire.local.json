@@ -3,7 +3,7 @@
     "version" : 2,
     "server": "localhost",
     "db": {
-        "db_name": "wordpress_3_2_1",
+        "db_name": "weddingwire_local",
         "db_user": "root",
         "db_password": "QzEoS8z4UjN0dIQArowX",
         "db_admin_user": "root",

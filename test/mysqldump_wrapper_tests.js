@@ -7,9 +7,9 @@ var should = require('should'),
     util = require('util'),
     test_helpers = require('./test_helpers');
 
-describe('build', function(){
+describe('mysqldump', function(){
 
-    describe('mysqldump#schema', function(){
+    describe('schema', function(){
         var sql = "";
         before(function(done){
             var config = {
@@ -21,15 +21,47 @@ describe('build', function(){
                     "db_admin_password": "QzEoS8z4UjN0dIQArowX"
                 }
             };
-            mysqldump.schema(config, "wp_commentmeta wp_comments wp_links wp_options wp_postmeta wp_posts wp_terms wp_term_relationships wp_usermeta wp_users", function(dumptext, error) {
+            mysqldump.schema(config, "wp_commentmeta", function(dumptext, error) {
                sql = dumptext;
+               cli.debug(sql);
                done(error);
             });
         });
 
         it('should contain table definitions', function(){
-            cli.debug(sql);
-            sql.should.include.string("wp_commentmeta");
+            sql.should.include.string("CREATE TABLE");
+        });
+
+        it('should contain drop table', function(){
+            sql.should.include.string("DROP TABLE IF EXISTS");
+        });
+
+         it('should not contain AUTO_INCREMENT statements', function(){
+            sql.should.not.include.string("AUTO_INCREMENT");
+        });
+    });
+
+    describe('data', function(){
+        var sql = "";
+        before(function(done){
+            var config = {
+                "db": {
+                    "db_name": "forsitethemes_local",
+                    "db_user": "wp_user",
+                    "db_password": "wp_user_password",
+                    "db_admin_user": "root",
+                    "db_admin_password": "QzEoS8z4UjN0dIQArowX"
+                }
+            };
+            mysqldump.data(config, "wp_posts", function(dumptext, error) {
+               sql = dumptext;
+               cli.debug(sql);
+               done(error);
+            });
+        });
+
+        it('should contain table definitions', function(){
+            sql.should.include.string("CREATE TABLE");
         });
     });
 });

@@ -7,7 +7,7 @@
 		<field name="post_author">1</field>
 		<field name="post_date">2011-12-15 15:03:03</field>
 		<field name="post_date_gmt">2011-12-15 15:03:03</field>
-		<field name="post_content">Welcome to WordPress. This is an edit. Edit or delete it, then start blogging!</field>
+		<field name="post_content">Welcome to WordPress. &lt;p&gt;This is an edit.&lt;/p&gt; Edit or delete it, then start blogging!</field>
 		<field name="post_title">Hello world!</field>
 		<field name="post_excerpt"></field>
 		<field name="post_status">publish</field>

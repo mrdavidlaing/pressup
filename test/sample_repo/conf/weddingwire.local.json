@@ -19,7 +19,11 @@
         "LOGGED_IN_SALT":   "zA?)PJxCe=x;a8iy{F5Q*Lt=9J^`-a*rEz(7{M^gQ4J/]Pw/m`~|tk}]2$CcH-B-",
         "NONCE_SALT":       "eXzWOZ|3ob|/a D!:RLN<+20w>S8gyfW.t^%W1QI[[Jiy)|GeE%tFr@4Mg,:Z$%/"
     },
-    "wordpress" : "lib/wordpress/wordpress-3.2.1",
+    "wordpress" : {
+        "source": "lib/wordpress/wordpress-3.2.1",
+        "type": "multisite",
+        "build_action": "copy"
+    },
     "themes" : {
         "my-theme" : {
             "source": "src/themes/my-theme",

@@ -84,6 +84,27 @@ describe('build', function(){
             fs.statSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/wp-admin").gid.should.equal(global_config.built.gid);
         });
     });
+    describe('config structure' , function(){
+        var result, output="";
+        before(function(){
+
+            var unhook = test_helpers.grab_output(function(string, encoding, fd) {
+                output += string;
+            });
+
+            result = build({base_folder: sample_repo_folder},{
+                "wordpress" : "path/to/wordpress"
+            });
+            
+            unhook();
+        });
+
+        it('should throw an error if config.wordpress element is of wrong format ', function(){
+          result.should.be.false;
+          output.should.match(/(.*)invalid format for config.wordpress element(.*)/);
+        });
+    });
+    
     describe('[rebuild of existing version]\n $ pressup build '+ sample_repo_folder + '\n$ pressup build '+ sample_repo_folder , function(){
         before(function(){
             var result, output="";

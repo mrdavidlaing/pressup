@@ -1,0 +1,21 @@
+{
+    "fqdn": "wp-multisite-plus.com",
+    "version" : 1,
+    "server": "localhost",
+    "db": {
+        "db_name": "wp-multisite-plus_com",
+        "db_user": "root",
+        "db_password": "QzEoS8z4UjN0dIQArowX",
+        "db_admin_user": "root",
+        "db_admin_password": "QzEoS8z4UjN0dIQArowX"
+    },
+    "wordpress" : {
+        "source": "{pressup}/templates/wordpress-3.3.1-multisite-plus",
+        "type": "multisite",
+        "build_action": "copy"
+    },
+    "themes" : {
+    },
+    "plugins" : {
+    }
+}

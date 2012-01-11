@@ -23,7 +23,7 @@ describe('mysqldump', function(){
             };
             mysqldump.schema(config, "wp_commentmeta", function(dumptext, error) {
                sql = dumptext;
-               cli.debug(sql);
+               //cli.debug(sql);
                done(error);
             });
         });
@@ -55,13 +55,13 @@ describe('mysqldump', function(){
             };
             mysqldump.data(config, "wp_posts", function(dumptext, error) {
                sql = dumptext;
-               cli.debug(sql);
+               //cli.debug(sql);
                done(error);
             });
         });
 
-        it('should contain table definitions', function(){
-            sql.should.include.string("table_data name=\"wp_posts\"");
+        it('should contain replace into statements', function(){
+            sql.should.include.string("REPLACE INTO `wp_posts`");
         });
     });
 });

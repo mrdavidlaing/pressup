@@ -6,41 +6,47 @@ var should = require('should'),
     build = require('../lib/build'),
     sample_repo_folder = 'test/sample_repo',
     util = require('util'),
-    test_helpers = require('./test_helpers');
+    test_helpers = require('./test_helpers'),
+    config_of_custom_lib_site = {
+        fqdn: "test.domain.com",
+        version: 42,
+        "db": {
+            "db_name": "the_db_name",
+            "db_user": "wp_user",
+            "db_password": "wp_user_password",
+            "db_admin_user": "root",
+            "db_admin_password": "root_password"
+        },
+        "salts": {
+            "AUTH_KEY":         "the_auth_key",
+            "SECURE_AUTH_KEY":  "the_secure_auth_key",
+            "LOGGED_IN_KEY":    "the_logged_in_key",
+            "NONCE_KEY":        "the_nonce_key",
+            "AUTH_SALT":        "the_auth_salt",
+            "SECURE_AUTH_SALT": "the_secure_auth_salt",
+            "LOGGED_IN_SALT":   "the_logged_in_salt",
+            "NONCE_SALT":       "the_nonce_salt"
+        },
+        "wordpress" : {
+            "source": "lib/wordpress/wordpress-3.3-RC2",
+            "type": "multisite",
+            "build_action": "copy"
+        },
+        plugins: {},
+        themes: {}
+    };
 
 describe('build', function(){
     describe('[a new versioned build]\n $ pressup build ' + sample_repo_folder, function(){
         var result = false, output="",
             file_with_bad_permissions = "wp-app.php";
+            
         before(function() {
 
             fs.chownSync(sample_repo_folder + "/lib/wordpress/wordpress-3.3-RC2/" + file_with_bad_permissions, process.getuid(), process.getgid());  //break ownership
             fs.chmodSync(sample_repo_folder + "/lib/wordpress/wordpress-3.3-RC2/" + file_with_bad_permissions, 0600);  //break permissions
 
-            result = build({base_folder: sample_repo_folder},{
-                fqdn: "test.domain.com",
-                version: 42,
-                "db": {
-                    "db_name": "the_db_name",
-                    "db_user": "wp_user",
-                    "db_password": "wp_user_password",
-                    "db_admin_user": "root",
-                    "db_admin_password": "root_password"
-                },
-                "salts": {
-                    "AUTH_KEY":         "the_auth_key",
-                    "SECURE_AUTH_KEY":  "the_secure_auth_key",
-                    "LOGGED_IN_KEY":    "the_logged_in_key",
-                    "NONCE_KEY":        "the_nonce_key",
-                    "AUTH_SALT":        "the_auth_salt",
-                    "SECURE_AUTH_SALT": "the_secure_auth_salt",
-                    "LOGGED_IN_SALT":   "the_logged_in_salt",
-                    "NONCE_SALT":       "the_nonce_salt"
-                },
-                wordpress: "lib/wordpress/wordpress-3.3-RC2",
-                plugins: {},
-                themes: {}
-            });
+            result = build({base_folder: sample_repo_folder}, config_of_custom_lib_site);
         });
 
         it('should have returned true', function(){
@@ -87,55 +93,8 @@ describe('build', function(){
                 output += string;
             });
 
-            result = build({base_folder: sample_repo_folder},{
-                fqdn: "test.domain.com",
-                version: 42,
-                "db": {
-                    "db_name": "the_db_name",
-                    "db_user": "wp_user",
-                    "db_password": "wp_user_password",
-                    "db_admin_user": "root",
-                    "db_admin_password": "root_password"
-                },
-                "salts": {
-                    "AUTH_KEY":         "the_auth_key",
-                    "SECURE_AUTH_KEY":  "the_secure_auth_key",
-                    "LOGGED_IN_KEY":    "the_logged_in_key",
-                    "NONCE_KEY":        "the_nonce_key",
-                    "AUTH_SALT":        "the_auth_salt",
-                    "SECURE_AUTH_SALT": "the_secure_auth_salt",
-                    "LOGGED_IN_SALT":   "the_logged_in_salt",
-                    "NONCE_SALT":       "the_nonce_salt"
-                },
-                wordpress: "lib/wordpress/wordpress-3.3-RC2",
-                plugins: {},
-                themes: {}
-            });
-
-            result = build({base_folder: sample_repo_folder},{
-                fqdn: "test.domain.com",
-                version: 42,
-                "db": {
-                    "db_name": "the_db_name",
-                    "db_user": "wp_user",
-                    "db_password": "wp_user_password",
-                    "db_admin_user": "root",
-                    "db_admin_password": "root_password"
-                },
-                "salts": {
-                    "AUTH_KEY":         "the_auth_key",
-                    "SECURE_AUTH_KEY":  "the_secure_auth_key",
-                    "LOGGED_IN_KEY":    "the_logged_in_key",
-                    "NONCE_KEY":        "the_nonce_key",
-                    "AUTH_SALT":        "the_auth_salt",
-                    "SECURE_AUTH_SALT": "the_secure_auth_salt",
-                    "LOGGED_IN_SALT":   "the_logged_in_salt",
-                    "NONCE_SALT":       "the_nonce_salt"
-                },
-                wordpress: "lib/wordpress/wordpress-3.3-RC2",
-                plugins: {},
-                themes: {}
-            });
+            result = build({base_folder: sample_repo_folder},config_of_custom_lib_site);
+            result = build({base_folder: sample_repo_folder},config_of_custom_lib_site);
 
             unhook();
         });

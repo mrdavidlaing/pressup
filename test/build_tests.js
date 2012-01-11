@@ -34,6 +34,34 @@ var should = require('should'),
         },
         plugins: {},
         themes: {}
+    },
+    config_for_wp_multisite_plus = {
+        fqdn: "wp-multisite-plus.com",
+        version: 1,
+        "db": {
+            "db_name": "wp_multisite_plus",
+            "db_user": "wp_user",
+            "db_password": "wp_user_password",
+            "db_admin_user": "root",
+            "db_admin_password": "root_password"
+        },
+        "salts": {
+            "AUTH_KEY":         "the_auth_key",
+            "SECURE_AUTH_KEY":  "the_secure_auth_key",
+            "LOGGED_IN_KEY":    "the_logged_in_key",
+            "NONCE_KEY":        "the_nonce_key",
+            "AUTH_SALT":        "the_auth_salt",
+            "SECURE_AUTH_SALT": "the_secure_auth_salt",
+            "LOGGED_IN_SALT":   "the_logged_in_salt",
+            "NONCE_SALT":       "the_nonce_salt"
+        },
+        "wordpress" : {
+            "source": "{pressup_templates}/wordpress-3.3.1-multisite-plus/lib/wordpress",
+            "type": "multisite",
+            "build_action": "copy"
+        },
+        plugins: {},
+        themes: {}
     };
 
 describe('build', function(){
@@ -102,6 +130,25 @@ describe('build', function(){
         it('should throw an error if config.wordpress element is of wrong format ', function(){
           result.should.be.false;
           output.should.match(/(.*)invalid format for config.wordpress element(.*)/);
+        });
+    });
+    
+    describe('built-in wordpress templates' , function(){
+        var result, output="";
+        before(function(){
+
+            var unhook = test_helpers.grab_output(function(string, encoding, fd) {
+                output += string;
+            });
+
+            result = build({base_folder: sample_repo_folder}, config_for_wp_multisite_plus);
+            
+            unhook();
+        });
+
+        it('should not throw an error', function(){
+          result.should.be.true;
+          output.should.not.match(/ERROR/);
         });
     });
     

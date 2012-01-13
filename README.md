@@ -27,3 +27,12 @@ This creates mysqldump backup files in db/mysite_com
 ### Restore mysite.com's database over othersite.com's database
 
     /data/www/MyWordPressSites $ pressup db:restore target=conf/othersite.com.json --config conf/mysite.com.json
+
+## TODO
+
+### Add prompt for inputs
+
+Options:
+
+* https://github.com/visionmedia/commander.js
+* https://github.com/flatiron/prompt

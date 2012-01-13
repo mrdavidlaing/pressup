@@ -101,6 +101,9 @@ describe('build', function(){
 
             fs_helpers.modeSync(sample_repo_folder + "/httpdocs/test.domain.com/v42/" + file_with_bad_permissions).octal.should.equal("100755");
         });
+        it('should create a .gitignore in the uploads folder', function(){
+			path.existsSync(sample_repo_folder + "/httpdocs/test.domain.com/uploads/.gitignore").should.be.true;
+        });        
         it('should set the permissions on uploads/ to 777', function(){
             fs_helpers.modeSync(sample_repo_folder + "/httpdocs/test.domain.com/uploads").octal.should.equal("40777");
         });
@@ -129,7 +132,7 @@ describe('build', function(){
 
         it('should throw an error if config.wordpress element is of wrong format ', function(){
           result.should.be.false;
-          output.should.match(/(.*)invalid format for config.wordpress element(.*)/);
+          output.should.match(/(.*)invalid format for config -> wordpress element(.*)/i);
         });
     });
     

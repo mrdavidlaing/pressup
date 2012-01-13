@@ -4,3 +4,4 @@ test/sample_repo/httpdocs/*
 .idea/*
 test/tmp/*
 .DS_Store
+.settings.xml

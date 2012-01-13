@@ -21,6 +21,14 @@ var should = require('should'),
 +"define('SECURE_AUTH_SALT', 'put your unique phrase here');   "
 +"define('LOGGED_IN_SALT',   'put your unique phrase here');   "
 +"define('NONCE_SALT',       'put your unique phrase here');   "
++"define('WP_ALLOW_MULTISITE', true);                          "
++"define( 'MULTISITE', true );                                 "
++"define( 'SUBDOMAIN_INSTALL', false );                        "
++"$base = '/';                                                 "
++"define( 'DOMAIN_CURRENT_SITE', 'bidvoices.com' );            "
++"define( 'PATH_CURRENT_SITE', '/' );                          "
++"define( 'SITE_ID_CURRENT_SITE', 1 );                         "
++"define( 'BLOG_ID_CURRENT_SITE', 1 );                         "
 +"$table_prefix  = 'wp_';                                      "
 +"define('WPLANG', '');                                        "
 +"define('WP_DEBUG', false);                                   "
@@ -64,7 +72,10 @@ describe('build', function(){
             };
             wpconfig = build.__replace_config_values(wpsampleconfig, config);
         });
-
+        
+        it('should update DOMAIN_CURRENT_SITE', function(){
+            wpconfig.should.include.string("define('DOMAIN_CURRENT_SITE', 'test.domain.com');");
+        });
         it('should update WP_DEBUG', function(){
             wpconfig.should.include.string("define('WP_DEBUG', true);");
         });

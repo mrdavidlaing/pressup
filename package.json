@@ -7,14 +7,22 @@
     "type": "git",
     "url": "git://github.com/mrdavidlaing/pressup.git"
   },
-  "bin" : { "pressup" : "./bin/cli.js" },
+  "bin" : { 
+    "pressup" : "./bin/cli.js" 
+  },
   "engines": {
     "node": ">=0.6.5"
   },
   "dependencies": {
-	"cli": ">=0.3.8",
-	"underscore": ">=1.2.3",
-	"underscore.string": ">=2.0.0"
+	  "cli": ">=0.3.8",
+	  "underscore": ">=1.2.3",
+	  "underscore.string": ">=2.0.0"
   },
-  "devDependencies": { "should": ">=0.3.2" }
+  "devDependencies": { 
+      "should": ">=0.3.1",
+      "should": ">=0.3.2" 
+  },
+  "scripts": {
+      "test": "mocha --reporter spec --ui bdd test/build_tests.js"
+  }
 }

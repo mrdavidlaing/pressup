@@ -1,6 +1,32 @@
 # PressUp
 
-is a wordpress install optimised for theme and plugin developers.
+is a commandline tool to manage your WordPress git repository, and automate many operations common to managing 
+a number of similar WordPress installations.
+
+# Getting started
+
+### Install PressUp
+
+PressUp is a nodejs (v0.6+) based application.  It is written and tested on Ubuntu 11.10.
+
+TODO - write verbose installation instructions for stable install (via npm), and bleeding edge install (via git)
+
+### Create & initialise a git repository
+
+* Create an empty git repository, eg: /data/www/MyWordPressSites
+* Initialize this new repository as a pressup repository
+
+    /data/www/MyWordPressSites $ pressup init .
+
+* Initialize a new site profile
+
+    /data/www/MyWordPressSites $ pressup init site mysite.com
+    
+* Build the site
+
+    /data/www/MyWordPressSites $ pressup build --config conf/mysite.com.json
+    
+See [Getting started - step by step](https://github.com/mrdavidlaing/pressup/wiki/Getting-started---step-by-step) for a more complete example.
 
 # Examples
 

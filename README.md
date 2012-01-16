@@ -1,4 +1,4 @@
-# PressUp
+# PressUp [![Build Status](https://secure.travis-ci.org/mrdavidlaing/pressup.png)](http://travis-ci.org/mrdavidlaing/pressup)
 
 is a commandline tool to manage your WordPress git repository, and automate many operations common to managing 
 a number of similar WordPress installations.

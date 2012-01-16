@@ -19,10 +19,10 @@
 	  "underscore.string": ">=2.0.0"
   },
   "devDependencies": { 
-      "should": ">=0.3.1",
-      "should": ">=0.3.2" 
+      "should": ">=0.3.2",
+      "mocha": ">=0.3.x" 
   },
   "scripts": {
-      "test": "mocha --reporter spec --ui bdd test/build_tests.js"
+      "test": "./node_modules/.bin/mocha --reporter spec --ui bdd test/build_tests.js"
   }
 }

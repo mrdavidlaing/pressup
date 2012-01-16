@@ -23,6 +23,6 @@
       "mocha": ">=0.3.x" 
   },
   "scripts": {
-      "test": "./node_modules/.bin/mocha --reporter spec --ui bdd test/build_tests.js"
+      "test": "./node_modules/.bin/mocha --reporter spec --ui bdd test/init_tests.js"
   }
 }

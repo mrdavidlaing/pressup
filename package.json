@@ -2,7 +2,7 @@
   "author": "David Laing (http://davidlaing.com)",
   "name": "pressup",
   "description": "Build tools for WordPress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/mrdavidlaing/pressup.git"
@@ -11,7 +11,7 @@
     "pressup" : "./bin/cli.js" 
   },
   "engines": {
-    "node": ">=0.6.5"
+    "node": ">=0.6.0"
   },
   "dependencies": {
 	  "cli": ">=0.3.8",

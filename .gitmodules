@@ -1,0 +1,3 @@
+[submodule "tools/pressupbox"]
+	path = tools/pressupbox
+	url = http://github.com/mrdavidlaing/wordpress-in-a-box.git

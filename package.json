@@ -16,7 +16,9 @@
   "dependencies": {
 	  "cli": ">=0.3.8",
 	  "underscore": ">=1.2.3",
-	  "underscore.string": ">=2.0.0"
+	  "underscore.string": ">=2.0.0",
+    "commander":">=0.5.2",
+    "prompt":">=0.1.12"
   },
   "devDependencies": { 
       "should": ">=0.3.2",
